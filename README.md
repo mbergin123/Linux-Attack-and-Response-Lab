@@ -117,7 +117,7 @@ The /etc/passwd file was downloaded from the compromised system to demonstrate a
 download /etc/passwd
 
 Evidence:
-- ![Downloaded password file](images/download.png)
+- ![Downloaded password file](images/dowload.png)
 
 ---
 
