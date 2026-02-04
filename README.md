@@ -25,8 +25,8 @@ Tools Used:
 The Kali Linux network configuration was validated using ifconfig to confirm required interfaces were active. The loopback interface was manually enabled using ifconfig lo up and re-verified to ensure proper system operation.
 
 Evidence:
-- ifconfig.png
-- ifconfigup.png
+- ![Verify if loopback is up and running](images/ifconfig.png)
+- ![Bring loopback up](images/ifconfigup.png)
 
 ---
 
@@ -38,7 +38,7 @@ The Social-Engineer Toolkit was then launched to prepare the browser-based attac
 setoolkit
 
 Evidence:
-- settool.png
+- ![Used Social Engineering Tool, Setoolkit](images/settool.png)
 
 ---
 
@@ -52,7 +52,7 @@ Using SET, a browser-based Java 7 Applet Remote Code Execution attack was config
 A Meterpreter reverse TCP payload was configured with the attacker IP address 203.0.113.2 and listening port 6666. The SET web server was started to host the malicious Java applet.
 
 Evidence:
-- setwebserver.png
+- ![Set up web server](images/setwebserver.png)
 
 ---
 
@@ -63,7 +63,7 @@ netstat -nao | grep 6666
 The output confirmed an established reverse TCP connection to the attacker system, validating successful exploitation.
 
 Evidence:
-- netstat.png
+- ![Used command netstat](images/netstat.png)
 
 ---
 
@@ -75,9 +75,9 @@ The session was then interacted with using:
 sessions -i 1
 
 Evidence:
-- sessionrunning.png
-- sessioninfo.png
-- interact.png
+- ![Session in progress](images/sessionrunning.png)
+- ![Session Information](images/sessioninfo.png)
+- ![Set session to interact with machine](images/interact.png)
 
 ---
 
@@ -88,7 +88,7 @@ sysinfo
 This confirmed the compromised host was the intended Ubuntu Linux system.
 
 Evidence:
-- sysinfo.png
+- ![Used sysinfo to confirm compromised host](images/sysinfo.png)
 
 ---
 
@@ -99,7 +99,7 @@ getuid
 The session was running under the student user account.
 
 Evidence:
-- student.png
+- ![Confirmed session running under student's machine](images/student.png)
 
 ---
 
@@ -108,7 +108,7 @@ Running processes were reviewed using ps, and a live screenshot of the victim’
 screenshot
 
 Evidence:
-- screenshot.png
+- ![Used screenshot](images/screenshot.png)
 
 ---
 
@@ -117,7 +117,7 @@ The /etc/passwd file was downloaded from the compromised system to demonstrate a
 download /etc/passwd
 
 Evidence:
-- download.png
+- ![Downloaded password file](images/download.png)
 
 ---
 
@@ -129,7 +129,7 @@ pwd
 The output confirmed shell access under /home/student.
 
 Evidence:
-- shell.png
+- ![Confirmed Shell Access](images/shell.png)
 
 ---
 
@@ -140,7 +140,7 @@ id student
 The account belonged to multiple groups, including sudo, indicating elevated privilege potential.
 
 Evidence:
-- UID.png
+- ![Found UID](images/UID.png)
 
 ---
 
@@ -151,7 +151,7 @@ sudo su
 This successfully elevated access to the root user.
 
 Evidence:
-- sudo.png
+- ![Used sudo](images/sudo.png)
 
 ---
 
@@ -168,8 +168,8 @@ route -n >> report.txt
 cat report.txt | less
 
 Evidence:
-- reportxt.png
-- commands.png
+- ![Created Report text file](images/reportxt.png)
+- ![Create Commands](images/commands.png)
 
 ---
 
@@ -178,7 +178,7 @@ Authentication activity was reviewed using:
 cat /var/log/auth.log | less
 
 Evidence:
-- catvar.png
+- ![cat the var](images/catvar.png)
 
 ---
 
@@ -187,7 +187,7 @@ User login history was examined using:
 lastlog
 
 Evidence:
-- lastlog.png
+- ![used command last log](images/lastlog.png)
 
 ---
 
@@ -197,7 +197,7 @@ last -f /var/log/btmp | more
 last -f /var/log/wtmp | more
 
 Evidence:
-- lastf.png
+- ![Failed and successful logins](images/lastf.png)
 
 ---
 
